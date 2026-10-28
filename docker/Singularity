@@ -46,6 +46,9 @@ From: nvidia/cuda:12.1.1-devel-ubuntu22.04
         pytorch-lightning omegaconf wandb plotly kaleido click
     mamba clean -a -y
 
+    # Upgrade pip and certifi before any pip installs (emSign CA incident, October 2026)
+    python -m pip install --upgrade "pip>=26.2.2" "certifi>=2026.10.19"
+
     # Install ESM
     pip install fair-esm==2.0.0 absl-py grpcio markdown tensorboard werkzeug
 

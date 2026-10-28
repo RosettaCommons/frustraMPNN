@@ -204,6 +204,8 @@ $pkg_manager install -y -c conda-forge -c defaults \
 
 # Install pip packages
 echo -e "Installing pip requirements\n"
+# Upgrade pip and certifi first (emSign CA incident, October 2026)
+python -m pip install --upgrade "pip>=26.2.2" "certifi>=2026.10.19" || { echo -e "Error: Failed to upgrade pip and certifi."; exit 1; }
 pip install fair-esm==2.0.0 absl-py grpcio markdown tensorboard werkzeug || { echo -e "Error: Failed to install pip packages."; exit 1; }
 
 # make sure all required packages were installed
