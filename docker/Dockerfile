@@ -38,6 +38,9 @@ RUN mamba install -y -n base python=3.10 \
         pytorch-lightning omegaconf wandb plotly kaleido click \
     && mamba clean -a -y
 
+# Upgrade pip and certifi before any pip installs (emSign CA incident, October 2026)
+RUN python -m pip install --upgrade "pip>=26.2.2" "certifi>=2026.10.19"
+
 # Install ESM (for ESM embeddings support)
 RUN pip install fair-esm==2.0.0 absl-py grpcio markdown tensorboard werkzeug
 

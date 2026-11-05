@@ -23,6 +23,9 @@ FrustraMPNN is a message-passing neural network trained via transfer learning fr
 
 ## Installation
 
+> **Note:** Use pip 26.2.2 or newer, or uv 0.13.4 or newer. Older versions still trust the withdrawn emSign
+> root CA certificate. Update with `python -m pip install --upgrade pip` or `uv self update`.
+
 ### Quick Install (pip)
 
 ```bash
