@@ -31,7 +31,7 @@ RUN curl -L -o mambaforge.sh https://github.com/conda-forge/miniforge/releases/d
 RUN mkdir -p /app /app/results
 
 # Install Python and PyTorch with CUDA support
-RUN mamba install -y -n base python=3.10 \
+RUN mamba install -y -n base python=3.11 \
     numpy=1.26 pytorch=2.1.2 torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia \
     && mamba install -y -c conda-forge -c defaults \
         biopython=1.85 pandas scipy scikit-learn tqdm matplotlib seaborn \

@@ -4,9 +4,12 @@ This guide covers all installation methods for FrustraMPNN.
 
 ## Requirements
 
-- Python 3.10 or higher
+- Python 3.10 or higher (3.11 or newer recommended)
 - PyTorch 2.0 or higher
 - CUDA-capable GPU (recommended, but CPU works)
+
+> **Note:** Python 3.10 is still supported, but some dependencies (pillow, filelock) no longer
+> release security fixes for it.
 
 ## Installation Methods
 
@@ -61,7 +64,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```bash
 git clone https://github.com/schoederlab/frustraMPNN.git
 cd frustraMPNN
-uv venv --python 3.10
+uv venv --python 3.12
 source .venv/bin/activate
 uv pip install -e ".[all]"
 ```

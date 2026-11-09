@@ -88,7 +88,7 @@ docker-compose up
 
 The Dockerfile includes:
 - CUDA 12.1 base image
-- Python 3.10
+- Python 3.11
 - PyTorch with CUDA support
 - FrustraMPNN and all dependencies
 - frustrapy for validation
@@ -98,7 +98,7 @@ FROM nvidia/cuda:12.1.1-devel-ubuntu22.04
 
 # Install Python and dependencies
 RUN apt-get update && apt-get install -y \
-    python3.10 \
+    python3.11 \
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
