@@ -86,6 +86,11 @@ Documentation = "https://github.com/schoederlab/frustraMPNN#readme"
 Repository = "https://github.com/schoederlab/frustraMPNN"
 Issues = "https://github.com/schoederlab/frustraMPNN/issues"
 
+[tool.uv]
+# filelock 3.20.4+ added lock types with open advisories (fixed in 4.2.1, which
+# needs Python 3.11). On 3.10, pin the last release without them.
+constraint-dependencies = ["filelock==3.20.3; python_full_version < '3.11'"]
+
 [tool.hatch.metadata]
 allow-direct-references = true
 
