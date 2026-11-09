@@ -26,6 +26,9 @@ FrustraMPNN is a message-passing neural network trained via transfer learning fr
 > **Note:** Use pip 26.2.2 or newer, or uv 0.13.4 or newer. Older versions still trust the withdrawn emSign
 > root CA certificate. Update with `python -m pip install --upgrade pip` or `uv self update`.
 
+> **Python version:** Python 3.10 is still supported, but some dependencies (pillow, filelock) no longer
+> release security fixes for it. We recommend Python 3.11 or newer.
+
 ### Quick Install (pip)
 
 ```bash
@@ -64,7 +67,7 @@ cd frustraMPNN
 3. Create virtual environment and install dependencies:
 
 ```bash
-uv venv --python 3.10
+uv venv --python 3.12
 source .venv/bin/activate
 uv pip install -e ".[all]"
 ```
@@ -102,7 +105,7 @@ This creates a kernel named "FrustraMPNN" that will appear in Jupyter and VS Cod
 **In VS Code / Cursor:**
 1. Open the notebook file (`.ipynb`)
 2. Click the kernel selector in the top-right corner
-3. Select "FrustraMPNN" or ".venv (Python 3.10.x)"
+3. Select "FrustraMPNN" or ".venv (Python 3.12.x)"
 
 **In Jupyter Notebook / JupyterLab:**
 1. Open the notebook
